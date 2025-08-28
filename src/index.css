@@ -1,0 +1,7 @@
+/* src/index.css */
+@import "tailwindcss";
+
+.banner-img.animate-in {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
