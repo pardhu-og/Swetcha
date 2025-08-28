@@ -56,7 +56,7 @@ export default function Banner() {
 
       {/* Banner Content */}
       <div className="relative z-10 flex-1 max-w-full md:max-w-[50%] text-center md:text-left">
-        <h1 className="text-3xl md:text-[2.8rem] font-bold text-white md:text-[#2c3e50] mb-5">
+        <h1 className="text-3xl md:text-[2.8rem] font-bold text-white md:text-emerald-900 mb-5">
           Swetcha Naturals
         </h1>
         <p className="text-lg text-white md:text-gray-600 mb-6">
