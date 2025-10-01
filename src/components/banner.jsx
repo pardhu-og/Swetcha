@@ -70,7 +70,7 @@ export default function Banner() {
           <img src={logo} alt="logo" className="hidden md:inline-block w-18 rounded-full mr-1"/>
            Swetcha Naturals
         </h1>
-        <p className="text-xs sm:text-md xl:text-lg text-white md:text-gray-600 mb-6 ml-8">
+        <p className="text-xs sm:text-md xl:text-lg text-white md:text-gray-600 mt-2 sm:mt-0 mb-6 ml-8">
           Trusted Exporter of Indian Spices & Agro Products.
         </p>
         <a
