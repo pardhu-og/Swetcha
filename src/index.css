@@ -1,9 +1,31 @@
 /* src/index.css */
 @import "tailwindcss";
 
+@theme {
+  --animate-slideDown: slideDown 0.5s ease-out forwards;
+
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-100%);
+      
+    }
+    100% {
+      transform: translateY(0);
+      
+    }
+  }
+}
+
+/* For images */
 .banner-img.animate-in {
+  opacity: 1;
+  transform:  translateY(0);
+}
+
+/* For text */
+.text-animate-in {
   opacity: 1 !important;
-  transform: scale(1) !important;
+  transform: translateX(0) !important;
 }
 
 html {

@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div>
-      {showNav && <Navbar />}
+      {showNav && <Navbar/>} 
       <Banner />
       <About />
       <Products />

@@ -1,5 +1,12 @@
 // Banner.jsx
 import { useEffect } from "react";
+import chilliimg from "../assets/images/banner1.avif";
+import turmericimg from "../assets/images/banner2.jpg";
+import uraddalimg from "../assets/images/banner3.webp";
+import copraimg from "../assets/images/banner4.jpg";
+import logo from "../assets/images/logo2.png"
+import logo3 from "../assets/images/logo3.png"
+import { u } from "framer-motion/client";
 
 export default function Banner() {
   useEffect(() => {
@@ -28,43 +35,47 @@ export default function Banner() {
   return (
     <section className="relative flex flex-col md:flex-row justify-between items-center px-5 md:px-[10%] py-16 md:py-20 bg-gradient-to-br from-[#fdf3e7] to-white overflow-hidden">
       {/* Mobile Background with Overlay */}
-      <div className="absolute inset-0 md:hidden">
-        <div className="grid grid-cols-2 gap-2 w-full h-full">
+      <div className="absolute inset-0 md:hidden bg-black/40">
+        <div className="grid grid-cols-2 grid-rows-2 gap-1 w-full h-full">
           <img
-            src="https://img.freepik.com/free-photo/bowl-full-hot-peppers_1127-112.jpg"
+            src={chilliimg}
             alt="Indian Spices"
-            className="w-full h-40 object-cover"
+            className="w-full h-full object-cover"
           />
           <img
-            src="https://t3.ftcdn.net/jpg/01/82/27/42/360_F_182274289_RvpPTYZmC3n98ZXuH85d31XBfyEhk6b1.jpg"
+            src={turmericimg}
             alt="Turmeric"
-            className="w-full h-40 object-cover"
+            className="w-full h-full object-cover"
           />
           <img
-            src="https://spicebasket.com/cdn/shop/products/uzhunnu-dal-whole-urad-400g-458218.jpg?v=1708470118"
+            src={uraddalimg}
             alt="Urad Dal"
-            className="w-full h-40 object-cover"
+            className="w-full h-full object-cover"
           />
           <img
-            src="https://media.istockphoto.com/id/1181621477/photo/dry-coconut-khopara-for-sale-in-market-pune-n.jpg?s=612x612&w=0&k=20&c=dv6WQxGKznjhqx89_9EjTwu910log1JrzbvPBT3JxHs="
+            src={copraimg}
             alt="Copra"
-            className="w-full h-40 object-cover"
+            className="w-full h-full object-cover"
           />
         </div>
+        {/* Slightly stronger overlay + gradient only for mobile */}
         <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
       </div>
 
       {/* Banner Content */}
       <div className="relative z-10 flex-1 max-w-full md:max-w-[50%] text-center md:text-left">
-        <h1 className="text-3xl md:text-[2.8rem] font-bold text-white md:text-emerald-900 mb-5">
-          Swetcha Naturals
+        <h1 className="text-3xl md:text-5xl font-extrabold font-[cursive] lg:text-[2rem] xl:text-[2.8rem] md:font-bold text-white md:text-emerald-900 mb-2">
+          <img src={logo} alt="logo" className="hidden md:inline-block w-18 rounded-full mr-1"/>
+          <img src={logo3} alt="logo" className="opacity-85 inline-block  md:hidden w-13 rounded-full mr-1 "/>
+           Swetcha Naturals
         </h1>
-        <p className="text-lg text-white md:text-gray-600 mb-6">
+        <p className="text-md xl:text-lg text-white md:text-gray-600 mb-6 ml-8">
           Trusted Exporter of Indian Spices & Agro Products.
         </p>
         <a
           href="#products"
-          className="inline-block px-6 py-3 bg-[#e67e22] text-white font-bold rounded-lg shadow hover:bg-[#d35400] transition"
+          className="inline-block px-4 md:px-6 py-2 md:py-3 bg-[#e67e22] text-white font-bold rounded-lg shadow hover:bg-[#d35400] transition md:ml-28 xl:ml-36"
         >
           Explore Products
         </a>
@@ -74,24 +85,24 @@ export default function Banner() {
       <div className="hidden md:flex flex-1 justify-center items-center">
         <div className="grid grid-cols-2 gap-4">
           <img
-            src="https://img.freepik.com/free-photo/bowl-full-hot-peppers_1127-112.jpg"
+            src={chilliimg}
             alt="Indian Spices"
-            className="banner-img w-full h-52 object-cover rounded-xl shadow-md transform opacity-0 scale-95 transition-all duration-1000 ease-out"
+            className="banner-img w-full h-52 object-cover rounded-xl shadow-md transform opacity-1 scale-95 transition-all duration-1000 ease-out"
           />
           <img
-            src="https://t3.ftcdn.net/jpg/01/82/27/42/360_F_182274289_RvpPTYZmC3n98ZXuH85d31XBfyEhk6b1.jpg"
+            src={turmericimg}
             alt="Turmeric"
-            className="banner-img w-full h-52 object-cover rounded-xl shadow-md transform opacity-0 scale-95 transition-all duration-1000 ease-out"
+            className="banner-img w-full h-52 object-cover rounded-xl shadow-md transform opacity-1 scale-95 transition-all duration-1000 ease-out"
           />
           <img
-            src="https://spicebasket.com/cdn/shop/products/uzhunnu-dal-whole-urad-400g-458218.jpg?v=1708470118"
+            src={uraddalimg}
             alt="Urad Dal"
-            className="banner-img w-full h-52 object-cover rounded-xl shadow-md transform opacity-0 scale-95 transition-all duration-1000 ease-out"
+            className="banner-img w-full h-52 object-cover rounded-xl shadow-md transform opacity-1 scale-95 transition-all duration-1000 ease-out"
           />
           <img
-            src="https://media.istockphoto.com/id/1181621477/photo/dry-coconut-khopara-for-sale-in-market-pune-n.jpg?s=612x612&w=0&k=20&c=dv6WQxGKznjhqx89_9EjTwu910log1JrzbvPBT3JxHs="
+            src={copraimg}
             alt="Copra"
-            className="banner-img w-full h-52 object-cover rounded-xl shadow-md transform opacity-0 scale-95 transition-all duration-1000 ease-out"
+            className="banner-img w-full h-52 object-cover rounded-xl shadow-md transform opacity-1 scale-95 transition-all duration-1000 ease-out"
           />
         </div>
       </div>
