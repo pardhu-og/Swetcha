@@ -14,7 +14,7 @@ import urad2 from "../assets/images/urad2.jpg";
 import { CircleArrowRight, CircleArrowLeft } from 'lucide-react';
 const productsData = [
   {
-    name: "Chillies",
+    name: "Dry Chillies",
     desc: "Premium quality Indian chillies exported worldwide.",
     placeholder: chilli1,
     variants: [
@@ -390,27 +390,28 @@ export default function Products() {
 
         {/* Modal for Variants */}
         {selectedProduct && (
-          <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50 px-4">
-            <div className="bg-white rounded-xl shadow-lg max-w-3xl w-full p-6 relative overflow-y-auto max-h-[90vh]">
+          <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50 px-4 ">
+            <div className="bg-white rounded-xl shadow-lg max-w-3xl w-full p-6 relative max-h-[90vh] ">
               <button
-                className="absolute top-3 right-3 text-gray-500 hover:text-red-500 hover:cursor-pointer hover:scale-105 text-lg"
+                className="absolute top-1 right-2 text-gray-500 hover:text-red-500 hover:cursor-pointer hover:scale-105 text-lg font-bold"
                 onClick={() => setSelectedProduct(null)}
               >
                 ✕
               </button>
-              <h4 className="text-2xl font-bold mb-6 text-emerald-700 text-center">
-                {selectedProduct.name} Varieties
-              </h4>
-              <div className={`grid  gap-6 mb-6 ${selectedProduct.name !== "Chillies" ? "md:grid-cols-1" : "md:grid-cols-2"}`}>
+              <div className="overflow-y-auto max-h-[80vh] pr-2">
+                <h4 className="text-2xl font-bold mb-4 text-emerald-700 text-center">
+                 {selectedProduct.name} Varieties
+                </h4>
+                <div className={`grid gap-6 mb-6 ${selectedProduct.name !== "Dry Chillies" ? "md:grid-cols-1" : "md:grid-cols-2"}`}>
                 {selectedProduct.variants.map((variant, idx) => (
                   <div
                     key={idx}
-                    className={`p-4 border rounded-lg shadow-sm hover:shadow-md transition items-center space-x-4 bg-gray-50 ${selectedProduct.name === "Chillies" ? "flex" : "flex-col"} `}
+                    className={`p-4 border  rounded-lg shadow-sm hover:shadow-md transition items-center space-x-4 bg-gray-50 ${selectedProduct.name === "Dry Chillies" ? "flex" : "flex-col"} `}
                   >
                     <img
                       src={variant.photo}
                       alt={variant.name}
-                      className={`rounded bg-gray-100 ${selectedProduct.name === "Chillies" ? "w-30 h-30 object-cover" : "w-full h-48 object-cover"}`}
+                      className={`rounded bg-gray-100 ${selectedProduct.name === "Dry Chillies" ? "w-30 h-30 object-cover" : "w-full h-48 object-cover"}`}
                     />
                     <div>
                       <div className="font-semibold text-lg">
@@ -427,7 +428,7 @@ export default function Products() {
               {/* CTA Buttons */}
               <div className="flex justify-center space-x-4">
                 {/* Download Brochure */}
-                {selectedProduct.name == "Chillies" && <a
+                {selectedProduct.name == "Dry Chillies" && <a
                   href={`/brochures/${selectedProduct.name.toLowerCase()}.pdf`}
                   download
                   className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition text-center"
@@ -437,14 +438,15 @@ export default function Products() {
                 {/* Enquire Now */}
 
                 <a
-                  href={selectedProduct.name === `Chillies`?`#contact`:`#products`}
+                  href={selectedProduct.name === `Dry Chillies`?`#contact`:`#products`}
                   onClick={() => setSelectedProduct(null)}
                   className="inline-block px-6 py-3 bg-emerald-600 text-white font-semibold rounded-lg shadow-md hover:bg-emerald-700 transition text-center"
                 >
-                  {selectedProduct.name === `Chillies`?`Request a Quote`:`Explore Dry Chillies`}
+                  {selectedProduct.name === `Dry Chillies`?`Request a Quote`:`Explore Dry Chillies`}
                 </a>
 
                 
+              </div>
               </div>
             </div>
           </div>

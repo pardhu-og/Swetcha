@@ -4,7 +4,7 @@ import Banner from "./components/banner";
 import Navbar from "./components/navbar";
 import Products from "./components/products";
 import Certifications from "./components/certifications";
-import Contact from "./components/Contact";
+import Contact from "./components/contact";
 import Footer from "./components/footer";
 
 function App() {
