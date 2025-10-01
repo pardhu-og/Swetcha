@@ -1,6 +1,8 @@
 import { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
+const { VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, VITE_EMAILJS_PUBLIC_KEY, VITE_RECAPTCHA_SITE_KEY } = import.meta.env;
+
 
 export default function Contact() {
   const formRef = useRef();
@@ -19,10 +21,10 @@ export default function Contact() {
 
     emailjs
       .sendForm(
-        "service_qclunkv",
-        "template_kf12vt5",
+        VITE_EMAILJS_SERVICE_ID,
+        VITE_EMAILJS_TEMPLATE_ID,
         formRef.current,
-        "rld6znXWw8MypLjiG"
+        VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
@@ -114,7 +116,7 @@ export default function Contact() {
               </div>
 
               <ReCAPTCHA
-                sitekey="6LfYGrYrAAAAABFBZChHdhuHmksIWTFHAaMGUlu9"
+                sitekey={VITE_RECAPTCHA_SITE_KEY}
                 onChange={() => setCaptchaValid(true)}
                 className="my-4"
               />
