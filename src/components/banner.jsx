@@ -66,7 +66,7 @@ export default function Banner() {
       {/* Banner Content */}
       <div className="relative z-10 flex-1 max-w-full md:max-w-[50%] text-center md:text-left">
         <img src={logo3} alt="logo" className="opacity-85 inline-block  md:hidden w-13 rounded-full mr-1 "/>
-        <h1 className="text-4xl md:text-5xl font-extrabold font-[cursive] lg:text-[2rem] xl:text-[2.8rem] md:font-bold text-white md:text-emerald-900 mb-1 md:mb-2 inline-block">
+        <h1 className="text-4xl md:text-5xl font-extrabold font-[cursive] lg:text-[2rem] xl:text-[2.8rem] md:font-bold text-white md:text-emerald-900 -mb-1 md:mb-2 inline-block">
           <img src={logo} alt="logo" className="hidden md:inline-block w-18 rounded-full mr-1"/>
            Swetcha Naturals
         </h1>
