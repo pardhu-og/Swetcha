@@ -85,13 +85,13 @@ export default function Certifications() {
             {certificationsData.map((cert, idx) => (
               <div
                 key={idx}
-                className="min-w-[80%] snap-center flex-shrink-0 flex flex-col items-center cursor-pointer group"
+                className="min-w-[100%]  snap-center flex-shrink-0 flex flex-col items-center cursor-pointer group"
                 onClick={() => setSelectedCert(cert)}
               >
                 <img
                   src={cert.thumb}
                   alt={cert.title}
-                  className="w-48 h-64 object-fit rounded-lg shadow-md border border-gray-400 group-hover:scale-105 transition"
+                  className="w-[60vw] h-64 object-fit rounded-lg shadow-md border border-gray-400 group-hover:scale-105 transition"
                 />
                 <p className="mt-3 text-gray-700 font-medium">{cert.title}</p>
               </div>
