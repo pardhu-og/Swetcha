@@ -429,7 +429,7 @@ export default function Products() {
               <div className="flex justify-center space-x-4">
                 {/* Download Brochure */}
                 {selectedProduct.name == "Dry Chillies" && <a
-                  href={`/brochures/${selectedProduct.name.toLowerCase()}.pdf`}
+                  href={`/brochures/chillies.pdf`}
                   download
                   className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition text-center"
                 >
