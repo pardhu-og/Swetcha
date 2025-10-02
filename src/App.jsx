@@ -7,6 +7,8 @@ import Certifications from "./components/certifications";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
+
 
 function App() {
   const [showNav, setShowNav] = useState(false);
@@ -35,6 +37,7 @@ function App() {
       <Contact />
       <Footer />
       <Analytics />
+      <SpeedInsights />
     </div>
   );
 }
