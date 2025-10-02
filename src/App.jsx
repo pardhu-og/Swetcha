@@ -6,6 +6,7 @@ import Products from "./components/products";
 import Certifications from "./components/certifications";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   const [showNav, setShowNav] = useState(false);
@@ -33,6 +34,7 @@ function App() {
       <Certifications />
       <Contact />
       <Footer />
+      <Analytics />
     </div>
   );
 }
