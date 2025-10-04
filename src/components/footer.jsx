@@ -56,7 +56,7 @@ export default function Footer() {
         <div className="space-y-2 text-emerald-200">
           <p>Email: <span className="text-white">contact@swetchanaturals.com</span></p>
           <p>Phone: <span className="text-white">+91-8441-997999</span></p>
-          <p>Address: <span className="text-white">301 VBC Grand, Guntur, Andhra Pradesh, India</span></p>
+          <p>Administrative Office: <span className="text-white">301 VBC Grand, Guntur, Andhra Pradesh, India</span></p>
         </div>
       </div>
     </div>
