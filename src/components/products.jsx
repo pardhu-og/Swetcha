@@ -19,7 +19,7 @@ const productsData = [
     placeholder: chilli1,
     variants: [
       {
-        name: "Teja",
+        name: "Teja (S17)",
         photo: teja,
         details: (
           <>
@@ -73,7 +73,7 @@ const productsData = [
         )
       },
       {
-        name: "Guntur-341",
+        name: "Guntur-341 (US-341)",
         photo:guntur341,
         details: (
           <>
