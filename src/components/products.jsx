@@ -159,7 +159,7 @@ const productsData = [
   },
   {
     name: "Urad Dal",
-    desc: "Fresh and dried turmeric fingers sourced from trusted farms.",
+    desc: "Premium Indian Urad Dal: A nutrient powerhouse, rich in protein and fiber.",
     placeholder: uraddal,
     variants: [
       {
