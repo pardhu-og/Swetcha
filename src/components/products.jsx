@@ -19,6 +19,7 @@ const productsData = [
     placeholder: chilli1,
     variants: [
       {
+        id: "teja",
         name: "Teja (S17)",
         photo: teja,
         details: (
@@ -37,6 +38,7 @@ const productsData = [
         )
       },
       {
+        id: "sannam",
         name: "Sannam S4 (334)",
         photo: sannam,
         details: (
@@ -55,6 +57,7 @@ const productsData = [
         )
       },
       {
+        id: "byadgi",
         name: "Byadgi",
         photo: byadgi,
         details: (
@@ -73,6 +76,7 @@ const productsData = [
         )
       },
       {
+        id: "guntur341",
         name: "Guntur-341 (US-341)",
         photo:guntur341,
         details: (
@@ -90,12 +94,161 @@ const productsData = [
             markets.
           </>
         )
+      },
+      {
+        id: "physical_specs",
+        name: "",
+        details: (
+          <>
+  <div className="font-semibold text-lg mb-2 text-black text-center">
+      Physical Specifications
+  </div>
+  <div className="overflow-x-auto rounded-2xl shadow-sm border border-gray-200">
+    <table className="w-full text-left border-collapse">
+      <thead className="bg-gradient-to-r from-green-700 to-green-800 text-gray-100">
+        <tr>
+          <th className="py-4 px-6 text-lg font-semibold tracking-wide">Parameter</th>
+          <th className="py-4 px-6 text-lg font-semibold tracking-wide">Value</th>
+        </tr>
+      </thead>
+      <tbody className="bg-white">
+        {[
+          ["Moisture", "10-11 % (13% max)"],
+          ["Foreign Material", "1 % max"],
+          ["Broken Chillies", "1-2 % max"],
+          [
+            "Pods with Stalk (for stemless and stemcut variants)",
+            "1 % max",
+          ],
+          ["Damaged and Discoloured Pods", "1 % max"],
+          ["Loose Seeds", "1 % max"],
+        ].map(([parameter, value], index) => (
+          <tr
+            key={parameter}
+            className={`${
+              index % 2 === 0 ? "bg-gray-200" : "bg-white"
+            }`}
+          >
+            <td className="py-4 px-4 text-gray-800 font-medium border-b border-gray-200">
+              {parameter}
+            </td>
+            <td className="py-4 px-4 text-gray-700 border-b border-gray-200">
+              {value}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</>
+
+        )
+      },
+     {  
+      id: "chemical_specs",
+        name: "",
+        details: (
+          <>
+  <div className="font-semibold text-lg mb-2 text-black text-center">
+      Chemical Specifications
+  </div>
+  <div className="overflow-x-auto rounded-2xl shadow-sm border border-gray-200">
+    <table className="w-full text-left border-collapse">
+      <thead className="bg-gradient-to-r from-green-700 to-green-800 text-gray-100">
+        <tr>
+          <th className="py-4 px-6 text-lg font-semibold tracking-wide">Parameter</th>
+          <th className="py-4 px-6 text-lg font-semibold tracking-wide">Value</th>
+        </tr>
+      </thead>
+      <tbody className="bg-white">
+        {[
+          ["Scoville Heat Units (SHU)", "8,000-100,000 (variety-dependent)"],
+          ["ASTA Color Value", "40-160 (variety-dependent)"],
+          ["Capsaicin content", "0.2-0.5 % (varies by variety)"],
+          ["Alfatoxin level", "Below 5-10 ppb"],
+          ["Total Ash", "6-8 % max"],
+          ["Non-Volatile Ether Extract", "10-12 %"],
+        ].map(([parameter, value], index) => (
+          <tr
+            key={parameter}
+            className={`${
+              index % 2 === 0 ? "bg-gray-200" : "bg-white"
+            }`}
+          >
+            <td className="py-4 px-3 text-gray-800 font-medium border-b border-gray-200">
+              {parameter}
+            </td>
+            <td className="py-4 px-3 text-gray-700 border-b border-gray-200">
+              {value}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</>
+
+        )
+      },
+      {
+        id: "package",
+        name: "",
+        details: (
+          <>
+  <div className="overflow-x-auto rounded-2xl shadow-lg border border-gray-200">
+    <table className="w-full text-left border-collapse">
+      <thead className="bg-gradient-to-r from-green-700 to-green-800 text-gray-100">
+        <tr>
+          <th colspan="2" className="py-4 px-6 text-lg font-semibold tracking-wide text-center">Packaging, Payment & Shipping Info</th>
+        </tr>
+      </thead>
+      <tbody className="bg-white">
+        {[
+          [
+            "Packaging",
+            "Material: Jute Bags or PP Bags<br/>Size: 10 kg or 25 Kg<br/>Custom packaging & private labeling available on request.",
+          ],
+          [
+            "Payment Terms",
+            "Letter of Credit (LC) - At Sight<br/>or<br/>Telegraphic Transfer (TT): 50% advance + 50% against scanned copy of Bill of Lading",
+          ],
+          [
+            "Incoterms",
+            "FOB (Free On Board)<br/>CIF (Cost, Insurance & Freight)<br/>CFR (Cost & Freight)",
+          ],
+          [
+            "Shipment Options",
+            "FCL (Full Container Load):<br/>20 ft → ~6.25 MT<br/>40 ft → ~14 MT<br/><br/>*LCL (Less than Container Load) available for trial shipments.",
+          ],
+        ].map(([parameter, value], index) => (
+          <tr
+            key={parameter}
+            className={`${
+              index % 2 === 0 ? "bg-gray-200" : "bg-white"
+            }`}
+          >
+            <td className="py-4 px-6 text-gray-800 font-medium border-b border-gray-200 align-top">
+              {parameter}
+            </td>
+            <td
+              className="py-4 px-6 text-gray-700 border-b border-gray-200"
+              dangerouslySetInnerHTML={{ __html: value }}
+            />
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</>
+
+
+        )
       }
     ]
   },
 
   {
-    name: "Turmeric",
+    name: "Turmeric Fingers",
     desc: "Fresh and dried turmeric fingers sourced from trusted farms.",
     placeholder: turmeric1,
     variants: [
@@ -106,9 +259,9 @@ const productsData = [
           <>
           {/* Turmeric Card */}
 <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col space-y-4">
-  {/* Product Title */}
+  {/* Product Title 
   <h4 className="text-2xl font-bold text-emerald-800">Turmeric Fingers</h4>
-
+    */}
   {/* Product Details */}
   <div>
     <h5 className="text-lg font-semibold text-emerald-700 mb-1">Product Details</h5>
@@ -169,9 +322,9 @@ const productsData = [
           <>
           {/* Urad Dal Card */}
 <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col space-y-4">
-  {/* Product Title */}
+  {/* Product Title 
   <h4 className="text-2xl font-bold text-emerald-800">Urad Dal</h4>
-
+  */}
   {/* Product Details */}
   <div>
     <h5 className="text-lg font-semibold text-emerald-700 mb-1">Product Details</h5>
@@ -233,9 +386,9 @@ const productsData = [
           <>
           {/* Copra Card */}
 <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col space-y-4">
-  {/* Title */}
+  {/* Title 
   <h4 className="text-2xl font-bold text-emerald-800">Copra</h4>
-
+    */}
     {/* Description / Additional Info */}
   <div className="text-gray-700">
     <p>
@@ -400,21 +553,22 @@ export default function Products() {
               </button>
               <div className="overflow-y-auto max-h-[80vh] pr-2">
                 <h4 className="text-2xl font-bold mb-4 text-emerald-700 text-center">
-                 {selectedProduct.name} Varieties
+                 {selectedProduct.name}
                 </h4>
                 <div className={`grid gap-6 mb-6 ${selectedProduct.name !== "Dry Chillies" ? "md:grid-cols-1" : "md:grid-cols-2"}`}>
                 {selectedProduct.variants.map((variant, idx) => (
                   <div
                     key={idx}
-                    className={`p-4 border  rounded-lg shadow-sm hover:shadow-md transition items-center space-x-4 bg-gray-50 ${selectedProduct.name === "Dry Chillies" ? "flex" : "flex-col"} `}
+                    className={` p-4 h-fit border border-gray-400 rounded-lg shadow-sm hover:shadow-md transition items-center space-x-4 bg-gray-50 ${selectedProduct.name === "Dry Chillies" ? "flex" : "flex-col"} ${variant.id === "package" ? "md:col-span-2" : ""}`}
                   >
-                    <img
-                      src={variant.photo}
-                      alt={variant.name}
-                      className={`rounded bg-gray-100 ${selectedProduct.name === "Dry Chillies" ? "w-30 h-30 object-cover" : "w-full h-48 object-cover"}`}
-                    />
+                    {variant.photo && 
+                      <img
+                        src={variant.photo}
+                        alt={variant.name}
+                        className={`rounded bg-gray-100 ${selectedProduct.name === "Dry Chillies" ? "w-30 h-30 object-cover" : "w-full h-48 object-cover"}`}
+                    />}
                     <div>
-                      <div className="font-semibold text-lg">
+                      <div className="font-semibold text-lg mb-2">
                         {variant.name}
                       </div>
                       <div className="text-gray-600 text-sm">
@@ -440,7 +594,7 @@ export default function Products() {
                 <a
                   href={selectedProduct.name === `Dry Chillies`?`#contact`:`#products`}
                   onClick={() => setSelectedProduct(null)}
-                  className="inline-block px-6 py-3 bg-emerald-600 text-white font-semibold rounded-lg shadow-md hover:bg-emerald-700 transition text-center"
+                  className="inline-block px-6 py-3 bg-emerald-600 text-white font-semibold rounded-lg shadow-md hover:bg-emerald-700 transition text-center animate-bounce"
                 >
                   {selectedProduct.name === `Dry Chillies`?`Request a Quote`:`Explore Dry Chillies`}
                 </a>
