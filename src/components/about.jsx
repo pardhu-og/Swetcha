@@ -73,7 +73,7 @@ export default function About() {
             <div className="relative w-full pb-[56.25%]">{/* 16:9 aspect ratio */}
               {!showFallback ? (
                 <iframe
-                  src="https://www.youtube-nocookie.com/embed/EGrikrfqgNo?si=sCx0zFzdotVRFM3i"
+                  src="https://www.youtube-nocookie.com/embed/lzQwXtlbX4I?si=L9d1ViWYVEWboTnp"
                   title="Swetcha Naturals Overview"
                   className="absolute inset-0 w-full h-full rounded-xl"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
