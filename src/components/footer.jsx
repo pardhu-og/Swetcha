@@ -63,7 +63,7 @@ export default function Footer() {
 
     {/* Copyright */}
     <div className="border-t border-emerald-800 mt-10 pt-6 text-center text-emerald-300 text-sm">
-      <p>Copyright &copy; {new Date().getFullYear()} Swetcha Naturals. All rights reserved.</p>
+      <p>Copyright &copy; 2025 Swetcha Naturals. All rights reserved.</p>
     </div>
   </div>
 </footer>
