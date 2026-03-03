@@ -70,7 +70,7 @@ export default function Contact() {
                 Thank you for your message!
               </p>
               <p className="text-gray-700 mt-2">
-                We've received your inquiry and will reply to you within a few hours.
+                We've received your inquiry and will reply to you shortly.
               </p>
             </div>
           ) : (
